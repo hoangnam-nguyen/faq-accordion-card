@@ -1,0 +1,185 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-dark: hsl(238, 29%, 16%);
+    --clr-primary-red: hsl(14, 88%, 65%);
+    --clr-primary-violet: hsl(273, 75%, 66%);
+    --clr-primary-blue: hsl(240, 73%, 65%);
+    --clr-neutral-dark: hsl(237, 12%, 33%);
+    --clr-neutral-blue: hsl(240, 6%, 50%);
+    --clr-neutral-light: hsl(240, 5%, 91%);
+    
+    --fs-heading: 2rem;
+    --fs-title: .85rem;
+    --fs-paragraph: .75rem;
+    --ff: 'Kumbh Sans', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+@media only screen and (min-width: 56.25rem) { /* 900px */
+    :root {
+        --fs-heading: 3rem;
+        --fs-title: 1.2rem;
+        --fs-paragraph: 1rem;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(var(--clr-primary-violet), var(--clr-primary-blue));
+}
+
+main {
+    position: relative;
+    width: 20rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 1.5rem 2rem 1.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    font-family: var(--ff);
+    color: var(--clr-primary-dark);
+}
+
+.image-box {
+    display: none;
+}
+
+.image {
+    position: absolute;
+    top: -6.7rem;
+    left: .6rem;
+    width: 20rem;
+    height: 15rem;
+    background: 
+        url('images/illustration-woman-online-mobile.svg') no-repeat,
+        url('images/bg-pattern-mobile.svg') 1.8rem 7rem no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (min-width: 56.25rem) { /* 900px */
+    
+    body {
+        flex-direction: row;
+    }
+
+    main {
+        width: 60rem;
+        padding-left: 28rem;
+        padding-right: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        margin: 2rem 5rem 2rem 5rem;
+    }   
+
+    .image-box {
+        display: block;
+        position: absolute;
+        top: 12.5rem;
+        left: -6rem;
+        width: 10rem;
+        height: 10rem;
+        background: url('images/illustration-box-desktop.svg') no-repeat;
+        z-index: 1000;
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55%;
+        height: 100%;
+        background: 
+            url('images/illustration-woman-online-desktop.svg') -5rem 4rem no-repeat,
+            url('images/bg-pattern-desktop.svg') -36rem -18rem no-repeat;
+        z-index: 100;
+    }
+
+}
+
+.boxContent {
+    padding: .5rem 0;
+}
+
+.boxContent::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-neutral-light);
+}
+
+h1 {
+    text-align: center;
+    font-weight: var(--fw-700);
+    font-size: var(--fs-heading);
+    color: var(--clr-primary-dark);
+}
+
+.title {
+    display: inline-block;
+    font-size: var(--fs-title);
+    color: var(--clr-neutral-dark);
+    cursor: pointer;
+}
+
+.active .title {
+    font-weight: var(--fw-700);
+}
+
+.title::after {
+    content: url('images/icon-arrow-down.svg');
+    position: absolute;
+    right: 1.5rem;
+    transition: 500ms;
+}
+
+@media only screen and (min-width: 56.25rem) {
+    .title::after {
+        right: 4rem;
+    }
+}
+
+.active .title::after {
+    transition: 500ms;
+    transform: scaleY(-1);
+}
+
+.title:hover {
+    color: var(--clr-primary-red);
+}
+
+.content {
+    position: relative;
+    height: 0;
+    padding: 1rem 2.5rem 0 0;
+    overflow: hidden;
+    font-size: var(--fs-paragraph);
+    color: var(--clr-neutral-blue);
+    transition: 500ms;
+    overflow-y: hidden;
+}
+
+.active .content {
+    height: 5rem;
+}
+
+
+
