@@ -48,9 +48,7 @@ body {
 main {
     position: relative;
     width: 20rem;
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10rem auto 2rem auto;
     padding: 6rem 1.5rem 2rem 1.5rem;
     background-color: #fff;
     border-radius: 1.5rem;
@@ -82,10 +80,7 @@ main {
 
     main {
         width: 60rem;
-        padding-left: 28rem;
-        padding-right: 4rem;
-        padding-top: 1rem;
-        padding-bottom: 3rem;
+        padding: 1rem 4rem 3rem 28rem;
         margin: 2rem 5rem 2rem 5rem;
     }   
 
