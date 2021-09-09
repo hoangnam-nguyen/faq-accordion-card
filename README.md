@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/hoangnam-nguyen/faq-accordion-card](https://github.com/hoangnam-nguyen/faq-accordion-card)
+- Live Site URL: [https://hoangnam-nguyen.github.io/faq-accordion-card/](https://hoangnam-nguyen.github.io/faq-accordion-card/)
 
 ## My process
 
