@@ -65,7 +65,14 @@
 
     boxes.forEach(box => {
       box.addEventListener('click', () => {
-        box.classList.toggle('active');
+        if (box.classList.contains('active')) {
+          box.classList.toggle('active');
+        } else {
+          const activeBoxes = document.querySelectorAll('.active');
+          activeBoxes.forEach(activeBox => activeBox.classList.remove('active'));
+          
+          box.classList.toggle('active');
+        }
       })
     })
   </script>
